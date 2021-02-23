@@ -3,15 +3,15 @@ package part3.ex2.메소드;
 import java.util.Scanner;
 
 public class ExamList {
-	Exam[] exams;
-	int current;
+	private Exam[] exams;
+	private int current;
 	
 	
-	void printList() {
+	public void printList() {
 		this.printList(this.current);
 		}
 		
-	void printList(int size) {
+	public void printList(int size) {
 		System.out.print("⎡            ⎤\n");
 		System.out.print("⎢   성적출력   ⎟\n");
 		System.out.print("⎣            ⎦\n");
@@ -38,34 +38,7 @@ public class ExamList {
 		}
 	}
 	
-	static void printList(ExamList list, int size) {
-			System.out.print("⎡            ⎤\n");
-			System.out.print("⎢   성적출력   ⎟\n");
-			System.out.print("⎣            ⎦\n");
-			
-//			int size = list.current;
-			Exam[] exams = list.exams; 
-			
-			for(int i=0; i<size; i++) {
-			Exam exam = exams[i];
-			int kor = exam.kor;
-			int eng = exam.eng;
-			int math = exam.math;
-			
-			int total = kor+eng+math;
-			float avg = total/3.0f;
-			
-			System.out.printf("국어 : %d\n", kor);
-			System.out.printf("영어 : %d\n", eng);
-			System.out.printf("수학 : %d\n", math);
-			
-			System.out.printf("총 : %d\n", total);
-			System.out.printf("평 : %6.2f\n", avg);
-			System.out.println("--------------------");
-			}
-		}
-	
-	void inputList() {
+	public void inputList() {
 			Scanner scan = new Scanner(System.in);
 			System.out.print("⎡            ⎤\n");
 			System.out.print("⎢   성적입력   ⎟\n");
