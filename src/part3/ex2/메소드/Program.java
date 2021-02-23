@@ -7,7 +7,7 @@ public class Program {
 	public static void main(String[] args) {
 		
 		ExamList list = new ExamList();
-		list.init();
+
 		
 		int menu;
 		boolean keepLoop = true;
@@ -37,19 +37,20 @@ public class Program {
 			}
 		}
 	}
-			static int inputMenu() {
+	
+	static int inputMenu() {
 				
-				Scanner scan = new Scanner(System.in);
-				
-				System.out.println("\t⎡            ⎤\n");
-				System.out.println("\t⎢   메인 메뉴  ⎟\n");
-				System.out.println("\t⎣            ⎦\n");
-				System.out.println("\t1.성적입력");
-				System.out.println("\t2.성적출력");
-				System.out.println("\t3.종료");
-				System.out.println("\t>");
-				int menu = scan.nextInt();
-				
-				return menu;
-			}	
+		Scanner scan = new Scanner(System.in);
+					
+		System.out.println("\t⎡            ⎤\n");
+		System.out.println("\t⎢   메인 메뉴  ⎟\n");
+		System.out.println("\t⎣            ⎦\n");
+		System.out.println("\t1.성적입력");
+		System.out.println("\t2.성적출력");
+		System.out.println("\t3.종료");
+		System.out.println("\t>");
+		int menu = scan.nextInt();
+		
+		return menu;
+	}	
 }

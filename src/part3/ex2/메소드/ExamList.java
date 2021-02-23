@@ -3,9 +3,9 @@ package part3.ex2.메소드;
 import java.util.Scanner;
 
 public class ExamList {
+	
 	private Exam[] exams;
 	private int current;
-	
 	
 	public void printList() {
 		this.printList(this.current);
@@ -94,7 +94,7 @@ public class ExamList {
 				this.current++;
 		}
 	
-	public void init() {
+	public ExamList() {
 		exams= new Exam[3];
 		current = 0;
 	}
