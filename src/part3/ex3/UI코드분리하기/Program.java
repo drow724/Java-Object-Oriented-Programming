@@ -6,7 +6,7 @@ public class Program {
 	
 	public static void main(String[] args) {
 		
-		ExamList list = new ExamList();
+		ExamConsole list = new ExamConsole();
 
 		
 		int menu;

@@ -1,92 +1,16 @@
 package part3.ex3.UI코드분리하기;
 
-import java.util.Scanner;
-
 public class ExamList {
 	
 	private Exam[] exams;
 	private int current;
 	
-	public void printList() {
-		this.printList(this.current);
-		}
-		
-	public void printList(int size) {
-		System.out.print("⎡            ⎤\n");
-		System.out.print("⎢   성적출력   ⎟\n");
-		System.out.print("⎣            ⎦\n");
-		
-//		int size = list.current;
-		
-		for(int i=0; i<size; i++) {
-		Exam exam = this.get(i);//this.exams;
-		int kor = exam.getKor();//exam.kor;
-		int eng = exam.getEng();//exam.eng;
-		int math = exam.getMath();//exam.math;
-		
-		int total = exam.total();//kor+eng+math;
-		float avg = exam.avg();//total/3.0f;
-		
-		System.out.printf("국어 : %d\n", kor);
-		System.out.printf("영어 : %d\n", eng);
-		System.out.printf("수학 : %d\n", math);
-		
-		System.out.printf("총 : %d\n", total);
-		System.out.printf("평 : %6.2f\n", avg);
-		System.out.println("--------------------");
-		}
-	}
-	
-	private Exam get(int i) {
+	public Exam get(int i) {
 		// TODO Auto-generated method stub
 		return this.exams[i];
 	}
 
-	public void inputList() {
-			Scanner scan = new Scanner(System.in);
-			System.out.print("⎡            ⎤\n");
-			System.out.print("⎢   성적입력   ⎟\n");
-			System.out.print("⎣            ⎦\n");
-				
-				int kor,eng,math;
-
-				do {
-					System.out.printf("국어:");
-					kor = scan.nextInt();
-				
-					if(kor<0 || 100<kor)
-						System.out.println("성적범위(0~100)을 벗어났습니다.");
-				}while(kor<0 || 100<kor);
-				
-				do {
-					System.out.printf("영어:");
-					eng = scan.nextInt();
-				
-					if(eng<0 || 100<eng)
-						System.out.println("성적범위(0~100)을 벗어났습니다.");
-				}while(eng<0 || 100<eng);
-				
-				do {
-					System.out.printf("수학:");
-					math = scan.nextInt();
-				
-					if(math<0 || 100<math)
-						System.out.println("성적범위(0~100)을 벗어났습니다.");
-				}while(math<0 || 100<math);
-				
-				//Exam exam = new Exam();
-//				exam.setKor(kor);//exam.kor = kor;
-//				exam.setEng(eng);//exam.eng = eng;
-//				exam.setMath(math);//exam.math = math;
-				
-				Exam exam = new Exam(kor, eng, math);
-				
-				/*-----------------------------------------*/
-				
-				add(exam);
-		}
-	
-	private void add(Exam exam) {
+	public void add(Exam exam) {
 		Exam[] exams = this.exams;
 		int size = this.current;
 		
@@ -110,5 +34,10 @@ public class ExamList {
 	public ExamList() {
 		exams= new Exam[3];
 		current = 0;
+	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return current;
 	}
 }
