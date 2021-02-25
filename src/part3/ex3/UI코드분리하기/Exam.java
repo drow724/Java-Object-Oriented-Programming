@@ -1,4 +1,4 @@
-package part3.ex3.Getters와Setters;
+package part3.ex3.UI코드분리하기;
 
 public class Exam {
 	int kor;

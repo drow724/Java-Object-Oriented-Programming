@@ -1,4 +1,4 @@
-package part3.ex3.Getters와Setters;
+package part3.ex3.UI코드분리하기;
 
 import java.util.Scanner;
 
@@ -17,10 +17,9 @@ public class ExamList {
 		System.out.print("⎣            ⎦\n");
 		
 //		int size = list.current;
-		Exam[] exams = this.exams; 
 		
 		for(int i=0; i<size; i++) {
-		Exam exam = exams[i];
+		Exam exam = this.get(i);//this.exams;
 		int kor = exam.getKor();//exam.kor;
 		int eng = exam.getEng();//exam.eng;
 		int math = exam.getMath();//exam.math;
@@ -38,6 +37,11 @@ public class ExamList {
 		}
 	}
 	
+	private Exam get(int i) {
+		// TODO Auto-generated method stub
+		return this.exams[i];
+	}
+
 	public void inputList() {
 			Scanner scan = new Scanner(System.in);
 			System.out.print("⎡            ⎤\n");
@@ -77,25 +81,32 @@ public class ExamList {
 				
 				Exam exam = new Exam(kor, eng, math);
 				
-				Exam[] exams = this.exams;
-				int size = this.current;
+				/*-----------------------------------------*/
 				
-				if(exams.length == size) {
-					//1.크기가 5개 정도 더 새로운 배열을 생성하시오.
-					Exam[] temp = new Exam[this.exams.length + 5];
-					//2.값을 이주시키기
-					for(int i =0; i<size; i++)
-						temp[i] = exams[i];
-					//3. list.exams가 새로만든 temp 배열을 참조하도록 한다.
-					this.exams = temp;
-					
-					
-				}
-				
-				this.exams[this.current] = exam;
-				this.current++;
+				add(exam);
 		}
 	
+	private void add(Exam exam) {
+		Exam[] exams = this.exams;
+		int size = this.current;
+		
+		if(exams.length == size) {
+			//1.크기가 5개 정도 더 새로운 배열을 생성하시오.
+			Exam[] temp = new Exam[this.exams.length + 5];
+			//2.값을 이주시키기
+			for(int i =0; i<size; i++)
+				temp[i] = exams[i];
+			//3. list.exams가 새로만든 temp 배열을 참조하도록 한다.
+			this.exams = temp;
+			
+			
+		}
+		
+		this.exams[this.current] = exam;
+		this.current++;
+		
+	}
+
 	public ExamList() {
 		exams= new Exam[3];
 		current = 0;
