@@ -4,11 +4,19 @@ import java.util.Scanner;
 
 public class ExamConsole {
 	
+//	private ExamList list;
+//	
+//	public ExamConsole() {
+//		list = new ExamList();
+//	}
+	
+//	Composition Has A 일체형
 	private ExamList list = new ExamList();
 	
 	public void printList() {
-		this.printList(list.size());
-		}
+		
+		printList(list.size());
+	}
 		
 	public void printList(int size) {
 		System.out.print("⎡            ⎤\n");

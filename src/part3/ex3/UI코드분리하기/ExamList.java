@@ -30,7 +30,7 @@ public class ExamList {
 		this.current++;
 		
 	}
-
+//	Aggregation Has A
 	public ExamList() {
 		exams= new Exam[3];
 		current = 0;
