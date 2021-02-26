@@ -9,5 +9,6 @@ public class Program {
 		exam.setMath(10);
 		exam.setCom(10);//total값에 포함되지 않음
 		System.out.println(exam.total());
+		System.out.println(exam.avg());
 	}
 }
