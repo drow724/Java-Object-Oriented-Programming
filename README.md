@@ -5,3 +5,5 @@
 인스턴스(Instance) 메소드
 
 생성자 오버로드(Constructor Overload)
+
+is a 상속 (framework)
