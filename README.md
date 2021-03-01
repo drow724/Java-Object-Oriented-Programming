@@ -15,3 +15,5 @@ is a 상속 (framework)
 메소드 동적 바인딩
 
 코드 집중화와 추상화
+
+추상 메소드(Abstract Method)
