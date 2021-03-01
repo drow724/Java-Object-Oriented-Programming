@@ -17,3 +17,5 @@ is a 상속 (framework)
 코드 집중화와 추상화
 
 추상 메소드(Abstract Method)
+
+팩토리 메소드(Factory Method)
