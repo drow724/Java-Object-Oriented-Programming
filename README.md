@@ -21,3 +21,5 @@ is a 상속 (framework)
 팩토리 메소드(Factory Method)
 
 코드 분리와 인터페이스
+
+추상클래스와 인터페이스의 차이
