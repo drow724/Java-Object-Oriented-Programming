@@ -19,3 +19,5 @@ is a 상속 (framework)
 추상 메소드(Abstract Method)
 
 팩토리 메소드(Factory Method)
+
+코드 분리와 인터페이스
